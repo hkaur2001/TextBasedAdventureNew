@@ -3,38 +3,31 @@ package Game;
 import Rooms.Room;
 
 public class Board {
+    private Room[][] map;
+    private int length;
+    private int width;
 
-    String [][] map;
-    public  Board (Room[][] map)
-    {
+    public Board(Room[][] map) {
         this.map = map;
+        this.width = width;
+        this.length = length;
+    }
+    public Board(int length, int width){
+        this.map = new Room [length][width];
     }
 
-    public void fill(String str)
-    {
-        for(int i = 0; i < map.length; i++)
-        {
-            for (int n = 0; n < map[i].length; n++ )
-            {
-                System.out.println(Room [i][n]);
-            }
-        }
+    public Room[][] getBoard(){
+        return this.map;
     }
-    public String toString ()
-    {
-        String output = "";
-        for (int i = 0; i < map.length; i++)
-        {
-            for (int n = 0; n <map [i].length; n++)
-            {
-                output = output+map[i][n];
+
+    public void print() {
+        String row= "";
+        for(int i=0; i<map.length; i++) {
+            for(int j=0; j<map[i].length; i++) {
+                row+= map[i][j].toString();
             }
-            output = output+"\n";
+            System.out.println(row);
         }
-        return output;
-    }
-    public void edit (String replace, int row, int column)
-    {
-        map[row][column] = replace;
     }
 }
+
