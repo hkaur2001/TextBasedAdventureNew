@@ -23,12 +23,12 @@ public class Runner {
             }
         }
 
-        //Create a random winning room.
+        //Create a random  room.
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
         building[x][y] = new Room(x, y);
 
-        //Create a random Toy Room
+        //Create a random Math Room
         int z = (int)(Math.random()*building.length);
         int w = (int)(Math.random()*building.length);
         building[z][w] = new Rooms.Math_Major (z,w);
