@@ -12,31 +12,38 @@ public class Runner {
 
     public static void main(String[] args)
     {
-        Room[][] building = new Room[5][5];
-
+        Room[][] building = new Room[6][6];
+        Board map= new Board(building);
         //Fill the building with normal rooms
         for (int x = 0; x<building.length; x++)
         {
             for (int y = 0; y < building[x].length; y++)
             {
-                building[x][y] = new Room(x,y);
+                map.getBoard()[x][y] = new Room(x,y);
             }
         }
 
         //Create a random  room.
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
-        building[x][y] = new Room(x, y);
+        map.getBoard()[x][y] = new Room(x, y);
+
+        //Create a distraction  room.
+        int a = (int)(Math.random()*building.length);
+        int b = (int)(Math.random()*building.length);
+        map.getBoard()[a][b] = new Room(a, b);
+
 
         //Create a random Math Room
         int z = (int)(Math.random()*building.length);
         int w = (int)(Math.random()*building.length);
-        building[z][w] = new Rooms.Math_Major (z,w);
+        map.getBoard()[z][w] = new Rooms.Math_Major (z,w);
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
         building[0][0].enterRoom(player1);
         Scanner in = new Scanner(System.in);
+        map.print();
         while(gameOn)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");

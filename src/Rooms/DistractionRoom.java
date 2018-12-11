@@ -1,15 +1,17 @@
+
 package Rooms;
 
-import People.Person;
-
-import java.util.Scanner;
+        import People.Person;
 
 public class DistractionRoom extends Room
 {
+    Person occupant;
+    int xLoc,yLoc;
+    String contains;
 
-    public DistractionRoom(int w, int z) {
-        super(w, z);
-
+    public DistractionRoom(int a, int b) {
+        super(a, b);
+        this.contains="[Eng]";
     }
     public void enterRoom(Person x) {
 
@@ -17,8 +19,10 @@ public class DistractionRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("Uh oh, you have entered your english class.  You have not handed in your assignment from last week and you have been spotted =O");
-        Scanner getout = new Scanner(System.getout);
-        while()
-
+    }
+    @Override
+    public String toString()
+    {
+        return this.contains;
     }
 }

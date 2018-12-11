@@ -23,7 +23,8 @@ public class Board {
     public void print() {
         String row= "";
         for(int i=0; i<map.length; i++) {
-            for(int j=0; j<map[i].length; i++) {
+            row= "";
+            for(int j=0; j<map[i].length; j++) {
                 row+= map[i][j].toString();
             }
             System.out.println(row);

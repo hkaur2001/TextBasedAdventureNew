@@ -5,11 +5,13 @@ import People.Person;
 public class Room {
     Person occupant;
     int xLoc,yLoc;
+    String contains;
 
     public Room(int x, int y)
     {
         xLoc = x;
         yLoc = y;
+        this.contains="[ ]";
     }
 
     /**
@@ -31,6 +33,12 @@ public class Room {
     public void leaveRoom(Person x)
     {
         occupant = null;
+    }
+
+    @Override
+    public String toString()
+    {
+        return this.contains;
     }
 
 }
