@@ -6,6 +6,7 @@ public class Room {
     Person occupant;
     int xLoc,yLoc;
     String contains;
+    boolean beenthere = false;
 
     public Room(int x, int y)
     {
@@ -24,6 +25,8 @@ public class Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+        beenthere = true;
+
     }
 
     /**
@@ -36,9 +39,12 @@ public class Room {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return this.contains;
+        if (beenthere = true) {
+            System.out.println("You have visited this room");
+        }
+
     }
 
 }
