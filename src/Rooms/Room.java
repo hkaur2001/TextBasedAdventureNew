@@ -25,6 +25,10 @@ public class Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+
+        if (beenthere = true) {
+            System.out.println("You have visited this room");
+        }
         beenthere = true;
 
     }
@@ -40,11 +44,11 @@ public class Room {
 
     @Override
     public String toString() {
-        return this.contains;
-        if (beenthere = true) {
-            System.out.println("You have visited this room");
-        }
 
+        if(beenthere){
+            return "[*]";
+        }
+        return this.contains;
     }
 
 }

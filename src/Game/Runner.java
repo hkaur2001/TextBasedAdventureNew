@@ -2,6 +2,7 @@ package Game;
 
 
 import People.Person;
+import Rooms.DistractionRoom;
 import Rooms.Room;
 import java.util.Scanner;
 
@@ -31,7 +32,7 @@ public class Runner {
         //Create a distraction  room.
         int a = (int)(Math.random()*building.length);
         int b = (int)(Math.random()*building.length);
-        map.getBoard()[a][b] = new Room(a, b);
+        map.getBoard()[a][b] = new DistractionRoom(a, b);
 
 
         //Create a random Math Room
