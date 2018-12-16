@@ -1,8 +1,10 @@
 package People;
+import Item.ProblemSet;
 public class Person {
     String firstName;
     String familyName;
     int xLoc, yLoc;
+    public boolean ProblemSet = false;
 
 
     public int getxLoc() {
