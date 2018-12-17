@@ -34,7 +34,7 @@ public class Runner {
         int b = (int)(Math.random()*building.length);
         map.getBoard()[a][b] = new DistractionRoom(a, b);
 
-
+        //v=c
         //Create a random Math Room
         int z = (int)(Math.random()*building.length);
         int w = (int)(Math.random()*building.length);
@@ -48,12 +48,13 @@ public class Runner {
 
         //setup variables for timer
         double futureTime = 0;
-        int seconds = 0; //replace 0 with number of seconds the game should run
+        int seconds = 120; //replace 0 with number of seconds the game should run
         futureTime = System.nanoTime() + (long) (seconds * 1e9);
         while(gameOn)
         {
             if(System.nanoTime()<futureTime){//checks if the current time is less than max time
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
+            System.out.println(futureTime-System.nanoTime());
             String move = in.nextLine();
             if(validMove(move, player1, building))
             {

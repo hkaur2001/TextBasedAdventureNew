@@ -3,6 +3,7 @@ package Rooms;
 import People.Person;
 
     public class Math_Major extends Room
+
     {
         Person occupant;
         int xLoc,yLoc;
