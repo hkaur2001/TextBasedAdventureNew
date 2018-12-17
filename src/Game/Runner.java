@@ -5,6 +5,7 @@ import People.Person;
 import Rooms.DistractionRoom;
 import Rooms.Room;
 import java.util.Scanner;
+import Item.TimeExtender;
 
 public class Runner {
 
@@ -28,6 +29,12 @@ public class Runner {
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
         map.getBoard()[x][y] = new Room(x, y);
+
+        //Create a time extender
+        int g = (int)(Math.random()*building.length);
+        int h = (int)(Math.random()*building.length);
+        //map.getBoard()[g][h] = new TimeExtender(g, h);
+
 
         //Create a distraction  room.
         int a = (int)(Math.random()*building.length);
@@ -65,15 +72,16 @@ public class Runner {
                 System.out.println("Please choose a valid move.");
             }
 
-				/*if(checkPerson(x,y)){ instead of x and y replace with person comments
-					futureTime+=System.nanoTime() + (long) (30 * 1e9);
-				}*/
+				//if(xLoc == xcon, yLoc == ycon )){
+					//futureTime+=System.nanoTime() + (long) (30 * 1e9);
+				//}
 
         }else{
             gameOn = false;
         }
 
         }
+        System.out.println("The game has ended you did not reach in time :(");
 
         //add stuff here when game ends like print statements
 

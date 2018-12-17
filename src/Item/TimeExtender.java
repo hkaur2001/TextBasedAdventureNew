@@ -1,7 +1,8 @@
 package Item;
 
-public class TimeExtender extends Item{
+import People.Person;
 
+public class TimeExtender extends Item{
 
     public TimeExtender(int xcon, int ycon){
         super("TimeExtender", xcon,  ycon);

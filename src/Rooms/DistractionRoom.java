@@ -18,13 +18,15 @@ public class DistractionRoom extends Room
         super(a, b);
         this.contains="[Eng]";
 
-        questions = new String[2];
-        answers = new String[2];
+        questions = new String[3];
+        answers = new String[3];
         questionNumber = (int) Math.random() * 2 +1;
         questions[0] = "What type of word is run?";
         answers[0] = "verb";
         questions[1] = "What is a comparison using like or as?";
         answers[1] = "simile";
+        questions[2] = "What is the name of the device where an objected is given the traits of a person?";
+        answers[2] = "personification";
     }
 
 
