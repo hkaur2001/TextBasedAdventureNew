@@ -47,7 +47,7 @@ public class Runner {
         map.print();
 
         //setup variables for timer
-        int futureTime = 0;
+        double futureTime = 0;
         int seconds = 0; //replace 0 with number of seconds the game should run
         futureTime = System.nanoTime() + (long) (seconds * 1e9);
         while(gameOn)
