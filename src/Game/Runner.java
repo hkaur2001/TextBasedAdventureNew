@@ -45,8 +45,14 @@ public class Runner {
         building[0][0].enterRoom(player1);
         Scanner in = new Scanner(System.in);
         map.print();
+
+        //setup variables for timer
+        int futureTime = 0;
+        int seconds = 0; //replace 0 with number of seconds the game should run
+        futureTime = System.nanoTime() + (long) (seconds * 1e9);
         while(gameOn)
         {
+            if(System.nanoTime()<futureTime){//checks if the current time is less than max time
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();
             if(validMove(move, player1, building))
@@ -58,8 +64,19 @@ public class Runner {
                 System.out.println("Please choose a valid move.");
             }
 
+				/*if(checkPerson(x,y)){ instead of x and y replace with person comments
+					futureTime+=System.nanoTime() + (long) (30 * 1e9);
+				}*/
+
+        }else{
+            gameOn = false;
+        }
 
         }
+
+        //add stuff here when game ends like print statements
+
+
         in.close();
     }
 

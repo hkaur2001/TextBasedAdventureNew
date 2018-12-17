@@ -1,5 +1,5 @@
 package People;
-import Item.ProblemSet;
+
 public class Person {
     String firstName;
     String familyName;
